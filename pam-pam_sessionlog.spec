@@ -5,11 +5,11 @@ Name:		pam-%{modulename}
 Version:	2001.12.10
 Release:	1
 License:	GPL
-Vendor:		Pawel Boguslawski <bogi@ibnet.pl>
 Group:		Base
-URL:		http://www.ibnet.pl/programy/english.html
+Vendor:		Pawel Boguslawski <bogi@ibnet.pl>
 Source0:	%{modulename}-%{version}.tar.gz
 Patch1:		%{modulename}-char.patch
+URL:		http://www.ibnet.pl/programy/english.html
 BuildRequires:	pam-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	%{modulename}
@@ -27,8 +27,8 @@ patch -p2 < sessionlog-patch
 %patch1 -p0 
 
 %build
-%{__cc} %{rpmcflags} -c %{modulename}/%{modulename}.c
-ld -shared -x -o %{modulename}.so %{modulename}.o
+%{__cc} %{rpmcflags} -fPIC -c %{modulename}/%{modulename}.c
+ld -shared -x -o %{modulename}.so %{modulename}.o -lpam
 
 %install
 rm -rf $RPM_BUILD_ROOT
