@@ -4,6 +4,7 @@ Summary(pl):	Modu³ PAM do logowania sesji
 Name:		pam-%{modulename}
 Version:	2001.12.10
 Release:	2
+Epoch:		1
 License:	GPL
 Group:		Base
 Vendor:		Pawel Boguslawski <bogi@ibnet.pl>
