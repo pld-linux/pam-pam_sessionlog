@@ -3,7 +3,7 @@ Summary:	PAM module for session log
 Summary(pl):	Modu³ PAM do logowania sesji
 Name:		pam-%{modulename}
 Version:	2001.12.10
-Release:	1
+Release:	2
 License:	GPL
 Group:		Base
 Vendor:		Pawel Boguslawski <bogi@ibnet.pl>
@@ -36,12 +36,10 @@ install -d $RPM_BUILD_ROOT/lib/security
 
 install %{modulename}.so $RPM_BUILD_ROOT/lib/security
 
-gzip -9nf README INSTALL
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README INSTALL
 %attr(755,root,root) /lib/security/%{modulename}.so
