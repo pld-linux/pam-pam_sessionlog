@@ -8,19 +8,20 @@ Epoch:		1
 License:	GPL
 Group:		Base
 Vendor:		Pawel Boguslawski <bogi@ibnet.pl>
+# http://bogi.ibnet.pl/cgi/download?object=pam_sessionlog
 Source0:	%{modulename}-%{version}.tar.gz
 # Source0-md5:	0a36d2a5c4e37eb29c0a7996c57c7efe
 Patch1:		%{name}-char.patch
 URL:		http://www.ibnet.pl/programy/english.html
 BuildRequires:	pam-devel
+Obsoletes:	pam_sessionlog
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Obsoletes:	%{modulename}
 
 %description
-PAM module which login session to wmtp base.
+PAM module which logs session to wmtp base.
 
 %description -l pl
-Modu³ PAM loguj±cy sesje do bazy wtmp
+Modu³ PAM loguj±cy sesje do bazy wtmp.
 
 %prep
 %setup -q -n %{modulename}-%{version}
