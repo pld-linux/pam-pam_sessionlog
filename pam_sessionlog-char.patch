@@ -1,0 +1,29 @@
+diff -ur pam_sessionlog.backup/pam_sessionlog.c pam_sessionlog/pam_sessionlog.c
+--- pam_sessionlog.backup/pam_sessionlog.c	Wed Apr 10 18:33:02 2002
++++ pam_sessionlog/pam_sessionlog.c	Wed Apr 10 18:40:57 2002
+@@ -45,7 +45,6 @@
+ 
+ =========================================================================*/
+ 
+-#include <security/_pam_aconf.h>
+ #include <stdio.h>
+ #include <stdarg.h>
+ #include <pwd.h>
+@@ -238,7 +237,7 @@
+ 	ctrl = _pam_parse(argc, argv, &service);
+ 
+     /* get username */
+-	retval = pam_get_user(pamh, (const void **)&user, NULL);
++	retval = pam_get_user(pamh, (const char **)&user, NULL);
+     if (retval != PAM_SUCCESS || user == NULL || *user == '\0')
+ 	{
+ 		_log_err(LOG_NOTICE, "user unknown");
+@@ -290,7 +289,7 @@
+ 	ctrl = _pam_parse(argc, argv, &service);
+ 
+     /* get username */
+-	retval = pam_get_user(pamh, (const void **)&user, NULL);
++	retval = pam_get_user(pamh, (const char **)&user, NULL);
+     if (retval != PAM_SUCCESS || user == NULL || *user == '\0')
+ 	{
+ 		_log_err(LOG_NOTICE, "user unknown");
