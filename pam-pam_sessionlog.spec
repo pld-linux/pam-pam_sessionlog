@@ -3,7 +3,7 @@ Summary:	PAM module for session log
 Summary(pl):	Modu³ PAM do logowania sesji
 Name:		pam-%{modulename}
 Version:	2001.12.10
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		Base
