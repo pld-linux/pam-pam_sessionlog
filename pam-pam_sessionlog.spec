@@ -10,11 +10,10 @@ Group:		Base
 Vendor:		Pawel Boguslawski <bogi@ibnet.pl>
 Source0:	%{modulename}-%{version}.tar.gz
 # Source0-md5:	0a36d2a5c4e37eb29c0a7996c57c7efe
-Patch1:		%{modulename}-char.patch
+Patch1:		%{name}-char.patch
 URL:		http://www.ibnet.pl/programy/english.html
 BuildRequires:	pam-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Provides:	%{modulename}
 Obsoletes:	%{modulename}
 
 %description
