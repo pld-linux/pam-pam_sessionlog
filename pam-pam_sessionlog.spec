@@ -34,9 +34,9 @@ ld -shared -x -o %{modulename}.so %{modulename}.o -lpam
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/lib/security
+install -d $RPM_BUILD_ROOT/%{_lib}/security
 
-install %{modulename}.so $RPM_BUILD_ROOT/lib/security
+install %{modulename}.so $RPM_BUILD_ROOT/%{_lib}/security
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,4 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README INSTALL
-%attr(755,root,root) /lib/security/%{modulename}.so
+%attr(755,root,root) /%{_lib}/security/%{modulename}.so
