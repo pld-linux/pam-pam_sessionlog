@@ -25,7 +25,7 @@ Modu³ PAM loguj±cy sesje do bazy wtmp
 %prep
 %setup -q -n %{modulename}-%{version}
 patch -p2 < sessionlog-patch
-%patch1 -p0 
+%patch1 -p0
 
 %build
 %{__cc} %{rpmcflags} -fPIC -c %{modulename}/%{modulename}.c
