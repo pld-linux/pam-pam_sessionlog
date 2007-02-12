@@ -1,6 +1,6 @@
 %define 	modulename pam_sessionlog
 Summary:	PAM module for session log
-Summary(pl):	Modu≥ PAM do logowania sesji
+Summary(pl.UTF-8):   Modu≈Ç PAM do logowania sesji
 Name:		pam-%{modulename}
 Version:	2001.12.10
 Release:	4
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 PAM module which logs session to wmtp base.
 
-%description -l pl
-Modu≥ PAM loguj±cy sesje do bazy wtmp.
+%description -l pl.UTF-8
+Modu≈Ç PAM logujƒÖcy sesje do bazy wtmp.
 
 %prep
 %setup -q -n %{modulename}-%{version}
