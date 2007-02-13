@@ -1,6 +1,6 @@
 %define 	modulename pam_sessionlog
 Summary:	PAM module for session log
-Summary(pl.UTF-8):   Moduł PAM do logowania sesji
+Summary(pl.UTF-8):	Moduł PAM do logowania sesji
 Name:		pam-%{modulename}
 Version:	2001.12.10
 Release:	4
